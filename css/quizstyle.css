@@ -128,7 +128,7 @@ img {
 
 }
 
-@media (max-width: 767px) {
+@media (max-width: 800px) {
 
   *, *::after, *::before {
     box-sizing: border-box;
