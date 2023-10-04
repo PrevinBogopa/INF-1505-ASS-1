@@ -1,0 +1,193 @@
+/* PrismJS 1.29.0
+   https://prismjs.com/download.html#themes=prism-dark&languages=css&plugins=line-highlight+line-numbers */
+   
+/* General styling for code blocks */
+code[class*=language-],
+pre[class*=language-] {
+  color: #fff;
+  background: 0 0;
+  text-shadow: 0 -.1em .2em #000;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  white-space: normal; /* or 'pre-wrap' */
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Printing adjustments */
+@media print {
+  code[class*=language-],
+  pre[class*=language-] {
+    text-shadow: none;
+  }
+}
+
+/* Background for code blocks */
+:not(pre)>code[class*=language-],
+pre[class*=language-] {
+  background: #4c3f33;
+}
+
+/* Styling for pre elements (code block container) */
+pre[class*=language-] {
+  padding: 1em;
+  margin: 0.5em 0;
+  overflow: auto;
+  border: 0.3em solid #7a6651;
+  border-radius: 0.5em;
+  box-shadow: 1px 1px 0.5em #000 inset;
+}
+
+/* Styling for code elements within pre */
+:not(pre)>code[class*=language-] {
+  padding: 0.15em 0.2em 0.05em;
+  border-radius: 0.3em;
+  border: 0.13em solid #7a6651;
+  box-shadow: 1px 1px 0.3em -.1em #000 inset;
+  white-space: normal;
+}
+
+/* Syntax highlighting colors */
+.token.cdata,
+.token.comment,
+.token.doctype,
+.token.prolog {
+  color: #997f66;
+}
+
+.token.punctuation {
+  opacity: 0.7;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.boolean,
+.token.constant,
+.token.number,
+.token.property,
+.token.symbol,
+.token.tag {
+  color: #d1939e;
+}
+
+.token.attr-name,
+.token.builtin,
+.token.char,
+.token.inserted,
+.token.selector,
+.token.string {
+  color: #bce051;
+}
+
+.language-css .token.string,
+.style .token.string,
+.token.entity,
+.token.operator,
+.token.url,
+.token.variable {
+  color: #f4b73d;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #d1939e;
+}
+
+.token.important,
+.token.regex {
+  color: #e90;
+}
+
+/* Bold and italic styling */
+.token.bold,
+.token.important {
+  font-weight: 700;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+/* Cursor styling for entity tokens */
+.token.entity {
+  cursor: help;
+}
+
+/* Deleted text styling */
+.token.deleted {
+  color: red;
+}
+
+/* Styling for line highlighting */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+
+.line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%, 0.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%, 0.1) 70%, hsla(24, 20%, 50%, 0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+/* Styling for line numbers */
+.line-numbers .line-highlight:after,
+.line-numbers .line-highlight:before {
+  content: none;
+}
+
+pre[class*=language-].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows>span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows>span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
